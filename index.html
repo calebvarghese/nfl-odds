@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 NFL Playoff Simulator</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#view=sim">2026 NFL<br>Simulator</a>
+    <nav class="nav-links">
+      <a href="#view=sim" data-view="sim">Playoff picture</a>
+      <a href="#view=charts" data-view="charts">Outcomes</a>
+    </nav>
+    <select id="team-select" class="team-select" aria-label="Team"></select>
+  </div>
+</header>
+
+<div class="subbar">
+  <div class="subbar-inner" id="subbar-sim">
+    <img id="sub-logo" class="sub-logo" alt="">
+    <label for="scenario-select" class="sub-label">Change scenario:</label>
+    <select id="scenario-select" class="scenario-select">
+      <option value="playoffs">Make playoffs</option>
+      <option value="division">Win division</option>
+      <option value="seed1">Earn No. 1 seed</option>
+      <option value="pick1">Get No. 1 pick</option>
+    </select>
+    <span class="spacer"></span>
+    <span class="lock-count" id="lock-count"></span>
+    <button class="reset" id="reset-all" type="button">
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3a5 5 0 1 1-4.5 2.8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 1.5v4h4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      Reset
+    </button>
+  </div>
+  <div class="subbar-inner" id="subbar-charts" hidden>
+    <img id="sub-logo-2" class="sub-logo" alt="">
+    <span class="sub-label">Jump to a chart:</span>
+    <a class="chart-link active" href="#view=charts">Possible outcomes</a>
+  </div>
+</div>
+
+<main class="layout">
+  <section class="left" id="left">
+    <div class="loading" id="loading">Loading the 2026 season from ESPN…</div>
+  </section>
+  <aside class="panel" id="panel"></aside>
+</main>
+
+<footer class="foot" id="foot"></footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
