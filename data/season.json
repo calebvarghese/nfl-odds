@@ -1639,10 +1639,10 @@
    "date": "2026-11-13T01:15Z",
    "home": "NYG",
    "away": "WSH",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_IN_PROGRESS",
+   "homeScore": 21,
+   "awayScore": 24,
+   "final": true,
+   "status": "STATUS_FINAL",
    "spread": null
   },
   {
@@ -1651,11 +1651,11 @@
    "date": "2026-11-15T14:30Z",
    "home": "DET",
    "away": "NE",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": 2.5
+   "homeScore": 35,
+   "awayScore": 10,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873054",
@@ -1663,11 +1663,11 @@
    "date": "2026-11-15T18:00Z",
    "home": "NYJ",
    "away": "BUF",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": -8.5
+   "homeScore": 12,
+   "awayScore": 31,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873055",
@@ -1675,11 +1675,11 @@
    "date": "2026-11-15T18:00Z",
    "home": "NO",
    "away": "CAR",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": 2.5
+   "homeScore": 17,
+   "awayScore": 20,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873056",
@@ -1687,11 +1687,11 @@
    "date": "2026-11-15T18:00Z",
    "home": "CLE",
    "away": "HOU",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": -4.5
+   "homeScore": 27,
+   "awayScore": 24,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873057",
@@ -1699,11 +1699,11 @@
    "date": "2026-11-15T18:00Z",
    "home": "TEN",
    "away": "JAX",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": -10.5
+   "homeScore": 23,
+   "awayScore": 40,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873058",
@@ -1711,11 +1711,11 @@
    "date": "2026-11-15T18:00Z",
    "home": "ATL",
    "away": "KC",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": -3.0
+   "homeScore": 13,
+   "awayScore": 35,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873059",
@@ -1723,11 +1723,11 @@
    "date": "2026-11-15T18:00Z",
    "home": "IND",
    "away": "MIA",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": 3.5
+   "homeScore": 24,
+   "awayScore": 22,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873060",
@@ -1735,11 +1735,11 @@
    "date": "2026-11-15T18:00Z",
    "home": "GB",
    "away": "MIN",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": 3.0
+   "homeScore": 10,
+   "awayScore": 30,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873061",
@@ -1747,11 +1747,11 @@
    "date": "2026-11-15T21:05Z",
    "home": "ARI",
    "away": "LAR",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": -9.5
+   "homeScore": 6,
+   "awayScore": 34,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873062",
@@ -1759,11 +1759,11 @@
    "date": "2026-11-15T21:05Z",
    "home": "LV",
    "away": "SEA",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": -6.5
+   "homeScore": 13,
+   "awayScore": 21,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873063",
@@ -1771,11 +1771,11 @@
    "date": "2026-11-15T21:25Z",
    "home": "DAL",
    "away": "SF",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": -3.5
+   "homeScore": 40,
+   "awayScore": 46,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873064",
@@ -1783,11 +1783,11 @@
    "date": "2026-11-16T01:20Z",
    "home": "CIN",
    "away": "PIT",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": 3.5
+   "homeScore": 38,
+   "awayScore": 18,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873065",
@@ -1795,11 +1795,11 @@
    "date": "2026-11-17T01:15Z",
    "home": "BAL",
    "away": "LAC",
-   "homeScore": null,
-   "awayScore": null,
-   "final": false,
-   "status": "STATUS_SCHEDULED",
-   "spread": 4.5
+   "homeScore": 20,
+   "awayScore": 23,
+   "final": true,
+   "status": "STATUS_FINAL",
+   "spread": null
   },
   {
    "id": "401873066",
@@ -1811,7 +1811,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": 10.0
+   "spread": 12.5
   },
   {
    "id": "401873067",
@@ -1823,7 +1823,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": 14.0
+   "spread": 16.5
   },
   {
    "id": "401873068",
@@ -1835,7 +1835,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": 1.5
+   "spread": 2.5
   },
   {
    "id": "401873070",
@@ -1859,7 +1859,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": 9.5
+   "spread": 11.5
   },
   {
    "id": "401873072",
@@ -1871,7 +1871,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": 3.5
+   "spread": 6.5
   },
   {
    "id": "401873073",
@@ -1883,7 +1883,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": 7.5
+   "spread": 8.5
   },
   {
    "id": "401873076",
@@ -1907,7 +1907,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": 1.5
+   "spread": 3.5
   },
   {
    "id": "401873069",
@@ -1919,7 +1919,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": null
+   "spread": -6.0
   },
   {
    "id": "401873075",
@@ -1931,7 +1931,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": 8.5
+   "spread": 10.0
   },
   {
    "id": "401873077",
@@ -1943,7 +1943,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": 3.5
+   "spread": 3.0
   },
   {
    "id": "401873078",
@@ -1955,7 +1955,7 @@
    "awayScore": null,
    "final": false,
    "status": "STATUS_SCHEDULED",
-   "spread": null
+   "spread": -6.5
   },
   {
    "id": "401873079",

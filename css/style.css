@@ -50,6 +50,7 @@ img { display: block; }
 .reset:hover { color: var(--ink); }
 .chart-link { text-decoration: none; font-size: 16px; color: var(--muted); }
 .chart-link.active { color: var(--ink); font-weight: 700; }
+.m-odds { display: none; }
 
 /* ---------- layout ---------- */
 .layout { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 0; align-items: start; }
@@ -71,17 +72,17 @@ p.copy { font-family: var(--serif); font-size: 21px; line-height: 1.45; color: v
 .legend .ends .dec { color: var(--brown); }
 
 /* ---------- game rows ---------- */
-.col-heads { display: grid; grid-template-columns: 80px 1fr 28px 1fr; font-size: 14px; color: var(--ink-2); margin: 8px 0 2px; }
+.col-heads { display: grid; grid-template-columns: 80px minmax(0, 1fr) 28px minmax(0, 1fr); font-size: 14px; color: var(--ink-2); margin: 8px 0 2px; }
 .col-heads span:nth-child(2), .col-heads span:nth-child(4) { text-align: right; border-right: 1px solid var(--rule-2); padding-right: 6px; }
-.game-row { display: grid; grid-template-columns: 80px 1fr 28px 1fr; align-items: center; gap: 0; padding: 7px 0; border-bottom: 1px solid var(--rule); }
-.game-row.wk { grid-template-columns: 80px 1fr 1fr; column-gap: 36px; }
+.game-row { display: grid; grid-template-columns: 80px minmax(0, 1fr) 28px minmax(0, 1fr); align-items: center; gap: 0; padding: 7px 0; border-bottom: 1px solid var(--rule); }
+.game-row.wk { grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1fr); column-gap: 36px; }
 .when { font-size: 13px; line-height: 1.25; color: var(--muted); }
 .when b { display: block; color: var(--ink); font-weight: 700; }
 .at { text-align: center; color: var(--muted); font-size: 15px; }
 .tbtn { display: flex; align-items: center; gap: 10px; width: 100%; height: 46px; border: 0; border-radius: 4px; padding: 0 6px 0 12px; background: var(--field); cursor: pointer; text-align: left; transition: background .12s; }
 .tbtn:hover { background: #e9e9e3; }
-.tbtn img { width: 26px; height: 26px; object-fit: contain; }
-.tbtn .nm { flex: 1; font-size: 18px; }
+.tbtn img { width: 26px; height: 26px; object-fit: contain; flex: none; }
+.tbtn .nm { flex: 1; min-width: 0; font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tbtn .pct { min-width: 92px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 3px; font-size: 18px; font-weight: 600; background: var(--tint, var(--neutral)); color: var(--ink); }
 .tbtn .pct.strong { font-weight: 700; }
 .tbtn.locked { background: var(--locked); color: #fff; }
@@ -129,6 +130,11 @@ table.st tr.grp-end td { border-bottom: 2px solid var(--rule-2); }
 .outcomes .lbl-sm { font-size: 15px; fill: var(--ink-2); }
 .outcomes .lbl-rec { font-size: 34px; font-weight: 900; letter-spacing: -.03em; }
 .outcomes .lbl-rec-cap { font-size: 15px; fill: var(--ink-2); }
+.out-list { display: none; }
+.out-sum { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 18px; font-size: 15px; color: var(--ink-2); }
+.out-sum b { font-size: 22px; font-weight: 900; letter-spacing: -.02em; color: var(--ink); margin-left: 4px; }
+.out-sum .in b { color: var(--teal-dark); }
+.out-sum .out b { color: var(--brown-dark); }
 .outcomes .pct-lbl { font-size: 30px; font-weight: 900; letter-spacing: -.03em; }
 .upc h3 { margin: 4px 0 2px; }
 .upc .note { font-size: 13px; color: var(--muted); font-style: italic; margin-bottom: 10px; display: flex; justify-content: space-between; }
@@ -143,18 +149,53 @@ table.st tr.grp-end td { border-bottom: 2px solid var(--rule-2); }
 @media (max-width: 1000px) {
   .layout { grid-template-columns: 1fr; }
   .left { border-right: 0; }
-  .panel { position: static; max-height: none; border-top: 1px solid var(--rule); }
+  .panel { position: static; max-height: none; border-top: 1px solid var(--rule); scroll-margin-top: calc(var(--nav-h) + var(--sub-h)); }
   .big { font-size: 120px; }
+  .m-odds { display: inline-flex; align-items: center; justify-content: center; min-width: 64px; height: 40px; padding: 0 10px; border: 0; border-radius: 6px; background: var(--ink); color: #fff; font-size: 20px; font-weight: 800; letter-spacing: -.02em; cursor: pointer; }
 }
 @media (max-width: 640px) {
-  .nav-inner { gap: 14px; padding: 0 16px; }
-  .nav-links { display: none; }
+  :root { --nav-h: 52px; --sub-h: 60px; }
+  .nav-inner { gap: 16px; padding: 0 16px; }
+  .brand { display: none; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 14px; white-space: nowrap; }
+  .team-select { min-width: 0; max-width: 46vw; font-size: 14px; padding: 6px 8px; }
   .subbar-inner, .left, .panel, .foot { padding-left: 16px; padding-right: 16px; }
-  .col-heads, .game-row { grid-template-columns: 64px 1fr 20px 1fr; }
-  .game-row.wk { grid-template-columns: 64px 1fr 1fr; column-gap: 12px; }
-  .tbtn { padding-left: 8px; gap: 6px; }
-  .tbtn .nm { font-size: 15px; }
-  .tbtn .pct { min-width: 60px; font-size: 15px; }
+  .subbar-inner { gap: 8px; }
+  .sub-logo { width: 26px; height: 26px; }
+  #subbar-sim .sub-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .scenario-select { font-size: 15px; padding: 9px 32px 9px 10px; background-position: right 10px center; min-width: 0; }
   .lock-count { display: none; }
-  p.copy { font-size: 18px; }
+  .reset { padding: 6px 4px; font-size: 14px; }
+  .left { padding-top: 16px; min-height: 0; }
+  h2 { font-size: 23px; margin: 22px 0 10px; }
+  h3 { font-size: 18px; }
+  p.copy { font-size: 17px; margin: 22px 0; }
+  .legend .ends { font-size: 13px; }
+
+  /* date moves above the two team buttons so each button gets half the width */
+  .col-heads, .game-row { grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr); }
+  .col-heads { font-size: 12px; }
+  .col-heads span:first-child { display: none; }
+  .game-row { row-gap: 4px; padding: 8px 0; }
+  .game-row.wk { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 8px; }
+  .when { grid-column: 1 / -1; display: flex; gap: 6px; font-size: 12px; }
+  .when b { display: inline; }
+  .at { font-size: 13px; }
+  .tbtn { height: 42px; padding: 0 4px 0 8px; gap: 6px; }
+  .tbtn img { width: 20px; height: 20px; }
+  .tbtn .nm { font-size: 14px; }
+  .tbtn .pct { min-width: 40px; height: 34px; font-size: 14px; }
+  .week-head { margin-top: 20px; }
+
+  .big { font-size: 96px; margin-bottom: 12px; }
+  .big-label { font-size: 20px; }
+  .bars .lbl { font-size: 14px; }
+  table.st { font-size: 14px; }
+  table.st td.grp { font-size: 13px; padding-left: 8px; }
+
+  .outcomes svg { display: none; }
+  .out-list { display: block; }
+  .upc .g { grid-template-columns: 84px minmax(0, 1fr) 56px; font-size: 15px; }
+  .upc .g .d { font-size: 13px; }
 }

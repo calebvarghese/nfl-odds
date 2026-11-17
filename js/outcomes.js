@@ -79,6 +79,10 @@ export function renderOutcomes(ctx) {
     <p class="copy">Below are our projections for every way the ${name}’ season may end, from the No. 1 seed in the ${TEAMS[me].conf ? 'NFC' : 'AFC'} to the No. 1 pick in the NFL draft. These estimates update as you lock game results.</p>
     <h2>End-of-season outcomes</h2>
     <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="End-of-season outcomes for the ${name}">${svg}</svg>
+    <div class="out-list">
+      <div class="out-sum"><span>Record <b>${fmtRecord(ctx.selections.state, me)}</b></span><span class="in">Make playoffs <b>${fmtPct(inP)}</b></span><span class="out">Out <b>${fmtPct(out)}</b></span></div>
+      <div class="bars">${items.map((it) => `<span class="lbl">${it.lines.join(' ')}</span><div class="track"><i class="${it.grp === 'out' ? 'out' : ''}" style="width:${(it.p * 100).toFixed(1)}%"></i></div><span class="val">${fmtPct(it.p)}</span>`).join('')}</div>
+    </div>
     <p class="copy">This diagram shows our projections for every possible end-of-season outcome the ${name} may attain.</p>
   </div>`;
 }

@@ -4,6 +4,7 @@ import { computeElo, homeWinProb } from './elo.js';
 import { createSim, SCENARIOS } from './simcore.js';
 import { renderLeft, renderPanel, renderSubbar } from './render.js';
 import { renderOutcomes, renderUpcoming } from './outcomes.js';
+import { fmtPct } from './format.js';
 
 const SIMS = 40000;
 const BATCH = 4000;
@@ -12,7 +13,7 @@ const $ = (s) => document.querySelector(s);
 const els = {
   left: $('#left'), panel: $('#panel'), foot: $('#foot'),
   teamSelect: $('#team-select'), scenarioSelect: $('#scenario-select'),
-  lockCount: $('#lock-count'), resetAll: $('#reset-all'),
+  lockCount: $('#lock-count'), resetAll: $('#reset-all'), mOdds: $('#m-odds'),
   subSim: $('#subbar-sim'), subCharts: $('#subbar-charts'),
   logo: $('#sub-logo'), logo2: $('#sub-logo-2'),
 };
@@ -94,6 +95,7 @@ function render() {
   els.teamSelect.value = String(state.team);
   els.scenarioSelect.value = state.scenario;
   els.lockCount.innerHTML = renderSubbar(ctx);
+  els.mOdds.textContent = fmtPct(ctx.scenarioProb(state.team, state.scenario));
   els.subSim.hidden = state.view !== 'sim';
   els.subCharts.hidden = state.view !== 'charts';
   document.querySelectorAll('.nav-links a').forEach((a) => a.classList.toggle('active', a.dataset.view === state.view));
@@ -173,6 +175,7 @@ function wireEvents() {
     if (e.target.closest('#run-more')) { startRun({ reset: false }); render(); }
   });
   els.resetAll.addEventListener('click', () => resetLocks(() => true));
+  els.mOdds.addEventListener('click', () => els.panel.scrollIntoView({ behavior: 'smooth' }));
   els.teamSelect.addEventListener('change', () => { state.team = Number(els.teamSelect.value); writeHash(); render(); });
   els.scenarioSelect.addEventListener('change', () => { state.scenario = els.scenarioSelect.value; writeHash(); render(); });
   window.addEventListener('hashchange', () => {
