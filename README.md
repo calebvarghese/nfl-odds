@@ -13,6 +13,18 @@ python3 -m http.server 8000
 Open http://localhost:8000. Modules and the Web Worker need an HTTP origin, so
 opening `index.html` directly from disk will not work.
 
+## Deploy (Vercel)
+
+Static deploy, no build step. `vercel.json` serves the repo root as-is;
+`.vercelignore` keeps `ref_pics/` and `scripts/` out of the upload.
+
+```
+npx vercel        # preview
+npx vercel --prod # production
+```
+
+Or import the repo in the Vercel dashboard with Framework Preset "Other".
+
 ## Data
 
 Loaded live from ESPN's public scoreboard API on page load (cached in
